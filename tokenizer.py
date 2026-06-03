@@ -212,12 +212,14 @@ def build_tokenizer_from_dataset(
     import pandas as pd
 
     print(f"[Tokenizer] Đọc dữ liệu từ {train_file} ...")
-    if train_file.endswith(".csv"):
+    if train_file.endswith(".parquet"):
+        df = pd.read_parquet(train_file)
+    elif train_file.endswith(".csv"):
         df = pd.read_csv(train_file)
     elif train_file.endswith(".json") or train_file.endswith(".jsonl"):
         df = pd.read_json(train_file, lines=train_file.endswith(".jsonl"))
     else:
-        raise ValueError("Chỉ hỗ trợ file .csv hoặc .json/.jsonl")
+        raise ValueError("Chỉ hỗ trợ .parquet, .csv, .json/.jsonl")
 
     # Gộp cả src và tgt để xây vocab chung
     all_texts = df[CFG.src_col].tolist() + df[CFG.tgt_col].tolist()

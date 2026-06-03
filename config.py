@@ -7,14 +7,14 @@ class Config:
     # ------------------------------------------------------------------
     # Đường dẫn dữ liệu
     # ------------------------------------------------------------------
-    train_file:  str = "data/train.csv"       # hoặc .json tùy dataset
-    valid_file:  str = "data/valid.csv"
+    train_file:  str = "data/train.parquet"       # hoặc .json tùy dataset
+    valid_file:  str = "data/valid.parquet"
     output_dir:  str = "checkpoints"          # lưu checkpoint
     log_dir:     str = "logs"                 # lưu loss log
 
     # Tên cột trong file dữ liệu — đổi cho đúng với dataset thực tế
     src_col:     str = "article"              # cột văn bản gốc
-    tgt_col:     str = "highlights"           # cột tóm tắt
+    tgt_col:     str = "summary"           # cột tóm tắt
 
     # ------------------------------------------------------------------
     # Tokenizer / Vocabulary
