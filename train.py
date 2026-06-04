@@ -18,7 +18,7 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 
 from config import CFG
-from data.dataset import setup_data
+from dataset import setup_data
 from model import Transformer
 
 
