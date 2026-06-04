@@ -13,7 +13,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from config import CFG
-from data.tokenizer import Tokenizer, build_tokenizer_from_dataset
+from tokenizer import Tokenizer, build_tokenizer_from_dataset
 
 
 class SummarizationDataset(Dataset):
