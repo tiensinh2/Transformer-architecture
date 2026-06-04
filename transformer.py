@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 
-from .encoder import TransformerEncoder
-from .decoder import TransformerDecoder
+from encoder import TransformerEncoder
+from decoder import TransformerDecoder
 
 
 def make_src_mask(src, pad_idx=0):
