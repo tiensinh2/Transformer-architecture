@@ -1,8 +1,8 @@
 import math
 import torch.nn as nn
 
-from .attention import MultiHeadAttention
-from .layers import PositionalEncoding, FeedForwardNetwork
+from attention import MultiHeadAttention, scaled_dot_product_attention
+from layer import PositionalEncoding, FeedForwardNetwork
 
 
 class EncoderLayer(nn.Module):
