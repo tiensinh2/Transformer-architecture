@@ -14,8 +14,8 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 
 from config import CFG
-from data.tokenizer import Tokenizer
-from model import Transformer
+from tokenizer import Tokenizer
+from transformer import Transformer
 
 
 # ------------------------------------------------------------------
